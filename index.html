@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poker Game App</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="container">
+        <p id="score"></p>
+        <div class="inner-container">
+            <div class="content">
+                <div class="betting-amount">
+                    <label for="bettingAmount">Betting Amount:</label>
+                    <input type="number" id="bettingAmount" value="1" min="1" max="10">
+                </div>
+                <div class="reset">
+                    <input type="button" value="Reset" id="resetButton">
+                </div>
+            </div>
+            <div id="cards">
+                <div class="block">
+                    <img src="images/1.png" alt="First card" class="img-fluid" id="card0">
+                </div>
+                <div class="block">
+                    <img src="images/2.png" alt="Second card" class="img-fluid" id="card1">
+                </div>
+
+                <div class="block card">
+                    <div class="front">
+                        <img src="images/53.png" alt="Third card" class="img-fluid">
+                    </div>
+                    <div class="back">
+                        <img src="images/3.png" alt="Third card" class="img-fluid" id="card2">
+                    </div>
+                </div>
+                
+                <div class="block card">
+                    <div class="front">
+                        <img src="images/53.png" alt="Fourth card" class="img-fluid">
+                    </div>
+                    <div class="back">
+                        <img src="images/4.png" alt="Third card" class="img-fluid" id="card3">
+                    </div>
+                </div>
+                
+                <div class="block card">
+                    <div class="front">
+                        <img src="images/53.png" alt="Fifth card" class="img-fluid">
+                    </div>
+                    <div class="back">
+                        <img src="images/5.png" alt="Third card" class="img-fluid" id="card4">
+                    </div>
+                </div>
+            </div>
+            <p id="animationProgress"></p>
+            <div class="game-btn">
+                <input type="button" value="Bet" id="bet">
+            </div>
+        </div>
+        <div id="poker-table-div">
+            <table id="poker-table" class="stripe" width="100%">
+                <thead>
+                    <tr>
+                        <th>Hand</th>
+                        <th>Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="royalFlush">
+                        <td>Royal Flush</td>
+                        <td>10</td>
+                    </tr>
+                    <tr class="fourKind">
+                        <td>Four of a Kind</td>
+                        <td>8</td>
+                    </tr>
+                    <tr class="fullHouse">
+                        <td>Full House</td>
+                        <td>7</td>
+                    </tr>
+                    <tr class="flush">
+                        <td>Flush</td>
+                        <td>5</td>
+                    </tr>
+                    <tr class="straight">
+                        <td>Straight</td>
+                        <td>5</td>
+                    </tr>
+                    <tr class="threeKind">
+                        <td>Three of a Kind</td>
+                        <td>3</td>
+                    </tr>
+                    <tr class="twoPair">
+                        <td>Two Pair</td>
+                        <td>2</td>
+                    </tr>
+                    <tr class="pair">
+                        <td>Pair</td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+
+
+    <!--
+        JQuery library linking using script
+    -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" 
+    integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+    </script>
+    <!--
+        JQuery library for the Flip Functionality
+    -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Flip/1.1.2/jquery.flip.min.js"></script>
+    <!--
+        Data Tables documentatio in JQuery
+        https://datatables.net/examples/index
+    -->
+    <script type="text/javascript"  src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <!--
+        Custom Javascript File
+    -->
+    <script src="evalPoker.js"></script>
+</body>
+</html>

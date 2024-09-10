@@ -1,0 +1,105 @@
+.container {
+    width: 50em;
+    margin: auto;
+    border: 3px solid blue;
+    padding: 0 25px 25px 25px;
+}
+
+#score {
+    font-size: xx-large;
+    font-weight: bolder;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.inner-container {
+    background-color: green;
+    border-radius: 10px;
+}
+
+/**
+    CSS for the animation cards
+**/
+
+.block {
+    position: relative;
+    margin: 10px;
+    width: 0px;
+    box-shadow: 3px 3px 20px 2px greenyellow;
+}
+
+img {
+    height: 125px;
+}
+
+#cards {
+    visibility: hidden;
+    padding: 0 25px 0 0;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/**
+    CSS for the betting amount and the reset buttons to display start and end of the body
+*/
+.content {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px 25px 25px 25px;
+}
+
+
+#resetButton {
+    background-color: palevioletred;
+    font-size: large;
+    width: 100px;
+}
+
+.betting-amount {
+    width: 50%;
+    font-size: large;
+}
+
+input[type="number"] {
+    width: 40px;
+}
+
+#bet, #nextGame {
+    display: block;
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-size: x-large;
+}
+
+#poker-table-div {
+    padding: 0 25px 25px 25px;
+}
+
+/**
+    flip card css
+**/
+
+.front {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+}
+
+.card {
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    position: relative;
+}
+
+/**
+    highlight the table row if we get any of the hand right
+*/
+.highlight {
+    background-color: yellow !important;
+}
